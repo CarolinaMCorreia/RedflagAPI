@@ -21,14 +21,13 @@ public class Users {
     private Long id;
 
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(name = "username", nullable = false, unique = true)
     @Size(max = 20)
-    @Schema(description = "The username of the user", example = "carro123")
     private String username;
 
     @NotBlank
     @Size(min = 6 ,max = 12) // Minimum length for password
-    @Schema(description = "The password of the user", example = "password123")
+    @Column(name = "password_hash", nullable = false)
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true) // Relaterad datan laddas alltid samtidigt som huvudobjektet hämtas

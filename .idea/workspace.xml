@@ -4,20 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Grundläggande packages, dependencies och modeller färdiga.">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Repositories/RedflagsRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Repositories/UsersRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2mw0h2YJE7XygQ1QsSKKMxKYpcR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -27,9 +41,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/94Carcon/Skolarbeten/RedflagAPI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Settings.JavaScript",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -49,11 +73,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="1000" />
+      <workItem from="1727972452069" duration="13624000" />
     </task>
+    <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
+      <option name="closed" value="true" />
+      <created>1727989270696</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1727989270696</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Grundläggande packages, dependencies och modeller färdiga." />
+    <option name="LAST_COMMIT_MESSAGE" value="Grundläggande packages, dependencies och modeller färdiga." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

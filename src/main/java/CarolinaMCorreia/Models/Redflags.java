@@ -27,7 +27,7 @@ public class Redflags {
     private String description;
 
     @Enumerated(EnumType.STRING) // Specifierar att enumet ska sparas som en sträng i databasen
-    @Column(nullable = false, name = "category")
+    @Column( name = "category", nullable = false)
     private Category category;
 
     @ElementCollection
@@ -54,7 +54,5 @@ public class Redflags {
         EMOTIONAL,     // Emotionell
         FINANCIAL,      // Ekonomisk
         PHYSICAL;          // Fysisk
-
-
     }
 }
