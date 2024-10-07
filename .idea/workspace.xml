@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="application.properties edited. Minor changes to other classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/RedflagAPIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Repositories/RedflagsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Repositories/RedflagsRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +62,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="CarolinaMCorreia.Services" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="RedflagAPIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -94,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="38057000" />
+      <workItem from="1727972452069" duration="40765000" />
     </task>
     <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
       <option name="closed" value="true" />
@@ -110,7 +109,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1728031465882</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel.">
+      <option name="closed" value="true" />
+      <created>1728314746551</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1728314746551</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +125,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Grundläggande packages, dependencies och modeller färdiga." />
     <MESSAGE value="application.properties edited. Minor changes to other classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="application.properties edited. Minor changes to other classes" />
+    <MESSAGE value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
+    <option name="LAST_COMMIT_MESSAGE" value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
