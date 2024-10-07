@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -30,13 +31,13 @@ public class Redflags {
     @Column( name = "category", nullable = false)
     private Category category;
 
-    @ElementCollection
-    @Column(name = "examples", nullable = false, length = 1000)
-    @Size(max = 1000)
-    private Set<String> examples; // Försäkrar att varje inlägg är unikt. Ordning spelar ej roll.
 
-    @Column(name = "advice", nullable = false, length = 1000)
-    @Size(max = 1000)
+    @Column(name = "examples", nullable = false, length = 200)
+    @Size(max = 200)
+    private String examples; // Försäkrar att varje inlägg är unikt. Ordning spelar ej roll.
+
+    @Column(name = "advice", nullable = false, length = 200)
+    @Size(max = 200)
     private String advice;
 
     @CreationTimestamp // annotation sätter automatiskt värdet av fältet till den aktuella tidpunkten när entiteten skapas

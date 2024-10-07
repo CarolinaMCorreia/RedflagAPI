@@ -1,10 +1,13 @@
 package CarolinaMCorreia;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Main {
+public class RedflagAPIApplication {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(RedflagAPIApplication.class, args);
     }
+
 }
