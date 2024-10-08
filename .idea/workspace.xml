@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="RedflagsController + Service klara och testade + javadocs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="UsersController + Service klara + testade">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +45,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.RedflagsServiceTest.deleteFlag_ShouldDeleteRedflag.executor": "Run",
+    "JUnit.RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags.executor": "Run",
+    "JUnit.RedflagsServiceTest.getOneFlag_ShouldReturnRedflag_WhenRedflagExists.executor": "Run",
+    "JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag.executor": "Run",
+    "JUnit.RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag.executor": "Run",
+    "JUnit.UsersServiceTest.testCreateUser.executor": "Run",
+    "JUnit.UsersServiceTest.testDeleteUser.executor": "Run",
+    "JUnit.UsersServiceTest.testGetAllUsers.executor": "Run",
+    "JUnit.UsersServiceTest.testGetUserById.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -56,8 +71,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "inlay.hints",
     "vue.rearranger.settings.migration": "true"
   }
@@ -67,7 +82,87 @@
       <recent name="CarolinaMCorreia.Services" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
+    <configuration name="RedflagsServiceTest.deleteFlag_ShouldDeleteRedflag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="deleteFlag_ShouldDeleteRedflag" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="getAllRedflags_ShouldReturnListOfRedflags" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedflagsServiceTest.getOneFlag_ShouldReturnRedflag_WhenRedflagExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="getOneFlag_ShouldReturnRedflag_WhenRedflagExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="patchRedflag_ShouldUpdateExistingRedflag" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="saveFlag_ShouldReturnSavedRedflag" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RedflagAPIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="RedflagAPI" />
@@ -76,6 +171,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RedflagsServiceTest.deleteFlag_ShouldDeleteRedflag" />
+        <item itemvalue="JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" />
+        <item itemvalue="JUnit.RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" />
+        <item itemvalue="JUnit.RedflagsServiceTest.getOneFlag_ShouldReturnRedflag_WhenRedflagExists" />
+        <item itemvalue="JUnit.RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="47164000" />
+      <workItem from="1727972452069" duration="51658000" />
     </task>
     <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
       <option name="closed" value="true" />
@@ -123,7 +227,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1728324805621</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="UsersController + Service klara + testade">
+      <option name="closed" value="true" />
+      <created>1728331758138</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1728331758138</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +245,8 @@
     <MESSAGE value="application.properties edited. Minor changes to other classes" />
     <MESSAGE value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
     <MESSAGE value="RedflagsController + Service klara och testade + javadocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="RedflagsController + Service klara och testade + javadocs" />
+    <MESSAGE value="UsersController + Service klara + testade" />
+    <option name="LAST_COMMIT_MESSAGE" value="UsersController + Service klara + testade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -97,7 +97,7 @@ public class RedflagsService {
     public void deleteFlag(Long id) {
         Optional<Redflags> redflag = redflagsRepo.findById(id);
         if (redflag.isPresent()) {
-            redflagsRepo.delete(redflag.get());
+            redflagsRepo.deleteById(id);
         } else {
             throw new RuntimeException("Redflag with ID " + id + " not found");
         }
