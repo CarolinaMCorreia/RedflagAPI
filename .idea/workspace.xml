@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/mavenBuild.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/superlinter.yml" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Build-jobbet för applikationen tillagd. package-info filer i varje dir">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/mavenBuild.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/mavenBuild.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +190,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="56263000" />
+      <workItem from="1727972452069" duration="60045000" />
     </task>
     <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
       <option name="closed" value="true" />
@@ -243,7 +241,21 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1728385084030</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Superlinter tillagd i Github actions">
+      <option name="closed" value="true" />
+      <created>1728458865024</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1728458865024</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Build-jobbet för applikationen tillagd. package-info filer i varje dir">
+      <option name="closed" value="true" />
+      <created>1728463355196</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1728463355196</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +270,9 @@
     <MESSAGE value="JUnit tests in place and passed." />
     <MESSAGE value="Junit tests på plats och går igenom" />
     <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
+    <MESSAGE value="Superlinter tillagd i Github actions" />
+    <MESSAGE value="Build-jobbet för applikationen tillagd. package-info filer i varje dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build-jobbet för applikationen tillagd. package-info filer i varje dir" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
