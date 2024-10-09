@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="UsersController + Service klara + testade">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/mavenBuild.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/superlinter.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +192,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="51658000" />
+      <workItem from="1727972452069" duration="56263000" />
     </task>
     <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
       <option name="closed" value="true" />
@@ -234,7 +229,21 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1728331758138</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Junit tests på plats och går igenom">
+      <option name="closed" value="true" />
+      <created>1728382555954</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1728382555954</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions">
+      <option name="closed" value="true" />
+      <created>1728385084030</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1728385084030</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +255,10 @@
     <MESSAGE value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
     <MESSAGE value="RedflagsController + Service klara och testade + javadocs" />
     <MESSAGE value="UsersController + Service klara + testade" />
-    <option name="LAST_COMMIT_MESSAGE" value="UsersController + Service klara + testade" />
+    <MESSAGE value="JUnit tests in place and passed." />
+    <MESSAGE value="Junit tests på plats och går igenom" />
+    <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
