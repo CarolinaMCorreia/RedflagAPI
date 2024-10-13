@@ -2,6 +2,8 @@ package CarolinaMCorreia.Controllers;
 
 import CarolinaMCorreia.Models.Users;
 import CarolinaMCorreia.Services.UsersService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
+@Tag(name = "Users", description = "Endpoints for managing users")
 public class UsersController {
 
     private final UsersService usersService;
@@ -24,6 +27,7 @@ public class UsersController {
      * @return ResponseEntity containing the list of users.
      */
     @GetMapping("")
+    @Operation(summary = "Get all users", description = "Retrieves a list of all authors")
     public ResponseEntity<List<Users>> getAllUsers() {
         List<Users> users = usersService.getAllUsers();
         return ResponseEntity.ok(users);
@@ -36,6 +40,7 @@ public class UsersController {
      * @return ResponseEntity containing the user, or 404 Not Found if not found.
      */
     @GetMapping("/{id}")
+    @Operation(summary = "Get one user", description = "Retrieves a specific author based on its ID")
     public ResponseEntity<Users> getUserById(@PathVariable Long id) {
         Optional<Users> user = usersService.getUserById(id);
         return user.map(ResponseEntity::ok)
@@ -49,6 +54,7 @@ public class UsersController {
      * @return ResponseEntity containing the created user with a 201 Created status.
      */
     @PostMapping
+    @Operation(summary = "Creates a new user", description = "Creates and saves a new user")
     public ResponseEntity<Users> createUser(@Valid @RequestBody final Users user) {
         Users createdUser = usersService.createUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
@@ -62,6 +68,7 @@ public class UsersController {
      * @return ResponseEntity containing the updated user.
      */
     @PatchMapping("/{id}")
+    @Operation(summary = "Patch a user", description = "Updates an existing user")
     public ResponseEntity<Users> patchUser(
             @PathVariable final Long id,
             @RequestBody final Users userDetails) {
@@ -76,6 +83,7 @@ public class UsersController {
      * @return ResponseEntity with 204 No Content if the deletion was successful, or 404 Not Found if the user was not found.
      */
     @DeleteMapping("/{id}")
+    @Operation(summary = "Delete a user", description = "Deletes a user")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         try {
             usersService.deleteUser(id);

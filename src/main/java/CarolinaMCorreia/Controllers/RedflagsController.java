@@ -3,6 +3,7 @@ package CarolinaMCorreia.Controllers;
 import CarolinaMCorreia.Models.Redflags;
 import CarolinaMCorreia.Services.RedflagsService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/redflags")
 @RequiredArgsConstructor // Genererar konstruktor med obligatoriska fält för alla final eller @NonNull argument
+@Tag(name = "Redflags", description = "Endpoints for managing Redflags in relationships")
 public class RedflagsController {
 
     // Importera in referens till service som innehåller affärslogik för Redflags.
