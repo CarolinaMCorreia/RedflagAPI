@@ -18,6 +18,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id") // Specificera att kolumnnamnet i databasen ska vara user_id
     private Long id;
 
     @NotBlank
@@ -30,7 +31,7 @@ public class Users {
     @Column(name = "password_hash", nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true) // Relaterad datan laddas alltid samtidigt som huvudobjektet hämtas
+    @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
     private Set<Redflags> redflags; // En användare kan ha flera red flags
 
 }
