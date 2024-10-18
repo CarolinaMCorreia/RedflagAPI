@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="@JsonIdentityInfo" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="glömde ta bort gammal annotation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -373,7 +375,14 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1729274410425</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="glömde ta bort gammal annotation">
+      <option name="closed" value="true" />
+      <created>1729274723322</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1729274723322</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +413,8 @@
     <MESSAGE value="spring.jpa.open-in-view=false" />
     <MESSAGE value="spring.jpa.open-in-view=true" />
     <MESSAGE value="@JsonIdentityInfo" />
-    <option name="LAST_COMMIT_MESSAGE" value="@JsonIdentityInfo" />
+    <MESSAGE value="glömde ta bort gammal annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="glömde ta bort gammal annotation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

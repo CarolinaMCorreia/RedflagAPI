@@ -38,7 +38,7 @@ public class Users {
     @Column(name = "password_hash", nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Redflags> redflags; // En användare kan ha flera red flags
 
 }
