@@ -26,6 +26,11 @@ public class Users {
     @Size(max = 20)
     private String username;
 
+    @NotBlank
+    @Size(min = 6 ,max = 12) // Minimum length for password
+    @Column(name = "password_hash", nullable = false)
+    private String password;
+
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
     private Set<Redflags> redflags; // En användare kan ha flera red flags
 

@@ -33,8 +33,8 @@ class UsersServiceTest {
     void testGetAllUsers() {
         // Arrange
         List<Users> mockUsers = new ArrayList<>();
-        mockUsers.add(new Users(1L, "user1", null)); // Add dummy data
-        mockUsers.add(new Users(2L, "user2", null));
+        mockUsers.add(new Users(1L, "user1", "password1", null)); // Add dummy data
+        mockUsers.add(new Users(2L, "user2", "password2", null));
 
         when(usersRepo.findAll()).thenReturn(mockUsers); // Mock repository behavior
 
@@ -50,7 +50,7 @@ class UsersServiceTest {
     @Test
     void testGetUserById() {
         // Arrange
-        Users mockUser = new Users(1L, "user1", null);
+        Users mockUser = new Users(1L, "user1", "password1", null);
         when(usersRepo.findById(1L)).thenReturn(Optional.of(mockUser)); // Mock repository behavior
 
         // Act
@@ -64,8 +64,8 @@ class UsersServiceTest {
     @Test
     void testCreateUser() {
         // Arrange
-        Users newUser = new Users(null, "user1", null);
-        Users savedUser = new Users(1L, "user1", null);
+        Users newUser = new Users(null, "user1", "password1", null);
+        Users savedUser = new Users(1L, "user1", "password1", null);
         when(usersRepo.save(newUser)).thenReturn(savedUser); // Mock repository behavior
 
         // Act
@@ -80,7 +80,7 @@ class UsersServiceTest {
     @Test
     void testDeleteUser() {
         // Arrange
-        Users userToDelete = new Users(1L, "user1", null);
+        Users userToDelete = new Users(1L, "user1", "password1", null);
         when(usersRepo.findById(1L)).thenReturn(Optional.of(userToDelete)); // Mock findById
         doNothing().when(usersRepo).delete(userToDelete); // Mock delete method
 
