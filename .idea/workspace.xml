@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="cascadetype.ALL">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="OPTIONS to CORS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -389,14 +387,20 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1729275962715</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="OPTIONS to CORS">
+      <option name="closed" value="true" />
+      <created>1729277043305</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1729277043305</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="application.properties edited. Minor changes to other classes" />
     <MESSAGE value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
     <MESSAGE value="RedflagsController + Service klara och testade + javadocs" />
     <MESSAGE value="UsersController + Service klara + testade" />
@@ -421,7 +425,8 @@
     <MESSAGE value="@JsonIdentityInfo" />
     <MESSAGE value="glömde ta bort gammal annotation" />
     <MESSAGE value="cascadetype.ALL" />
-    <option name="LAST_COMMIT_MESSAGE" value="cascadetype.ALL" />
+    <MESSAGE value="OPTIONS to CORS" />
+    <option name="LAST_COMMIT_MESSAGE" value="OPTIONS to CORS" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
