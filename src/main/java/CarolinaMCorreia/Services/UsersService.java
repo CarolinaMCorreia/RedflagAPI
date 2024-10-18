@@ -64,9 +64,6 @@ public class UsersService {
             if (userDetails.getUsername() != null && !userDetails.getUsername().isBlank()) {
                 existingUser.setUsername(userDetails.getUsername());
             }
-            if (userDetails.getPassword() != null && !userDetails.getPassword().isBlank()) {
-                existingUser.setPassword(userDetails.getPassword()); // Make sure to hash the password if needed
-            }
 
             // Handle redflags if necessary
             if (userDetails.getRedflags() != null) {
