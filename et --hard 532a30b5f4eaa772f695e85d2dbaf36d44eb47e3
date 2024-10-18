@@ -1,0 +1,137 @@
+[33mcommit 2656b3ca72591d63a90fab39357ad42baedb8fcd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Fri Oct 18 10:53:19 2024 +0200
+
+    ?
+
+[33mcommit 757604c0936d73300239620c262d1bb83f6af6e5[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Fri Oct 18 10:47:26 2024 +0200
+
+    regretted
+
+[33mcommit c40003ff054f1b81f3e091b8f8471de7c0af8877[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Fri Oct 18 10:43:59 2024 +0200
+
+    tog bort password
+
+[33mcommit 532a30b5f4eaa772f695e85d2dbaf36d44eb47e3[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Tue Oct 15 19:27:14 2024 +0200
+
+    README.md klar
+
+[33mcommit 488091168203e00e4f96a8ab825719364a5c1795[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Mon Oct 14 21:48:35 2024 +0200
+
+    ändrade till JDK21
+
+[33mcommit fe6964ebaa9b33075f9ac937a5281d42432b9302[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Mon Oct 14 19:03:36 2024 +0200
+
+    Småändringar för tabellerna
+
+[33mcommit 76a46ad11a85ca7246e4579fdfe86e34fd4db381[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Sun Oct 13 20:03:51 2024 +0200
+
+    Kompletterade med fler annoteringar.
+
+[33mcommit 3b8a1f2fe1b0a4a83c6c8f98709c8dba86b520da[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Sun Oct 13 19:50:26 2024 +0200
+
+    La till Swagger
+
+[33mcommit 651e300effaeb1663e1829c8b2782a4ccf5b49a3[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 11:16:03 2024 +0200
+
+    Lade till Packeterings-jobbet i mavenBuild.yml
+
+[33mcommit cf9891aae0c8eb4af8f6d392f3c15cf1c83b7592[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 10:58:17 2024 +0200
+
+    Ändrade maven-jar-plugin till tidigare version
+
+[33mcommit fcc45b231bbafca3ae02832f08c82130227b0a96[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 10:53:58 2024 +0200
+
+    Ändrade maven-jar-plugin till tidigare version
+
+[33mcommit ba864d23e5491ac8ccd5788abb26338e1197ef37[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 10:48:57 2024 +0200
+
+    Ändrade till rätt version
+
+[33mcommit 924284ad55a2d531ee9ab693772ed9277e3434e7[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 10:42:31 2024 +0200
+
+    Build-jobbet för applikationen tillagd. package-info filer i varje dir
+
+[33mcommit 823283e91b6ddf0915b56f8ae9dfcd9917863459[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Wed Oct 9 09:27:42 2024 +0200
+
+    Superlinter tillagd i Github actions
+
+[33mcommit fe8c9dd394d1a646ad790dd3f1c909ce9581cabc[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Tue Oct 8 12:58:02 2024 +0200
+
+    Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions
+
+[33mcommit faae090356e0a50a0f9eb058b531915aac6e5421[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Tue Oct 8 12:15:53 2024 +0200
+
+    Junit tests på plats och går igenom
+
+[33mcommit 66a5e3fdf148d32372a227648e284e88ea28beb0[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Mon Oct 7 22:09:15 2024 +0200
+
+    UsersController + Service klara + testade
+
+[33mcommit 36cbde449c7b7dc66dcb6ba0ee236775a2dc6475[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Mon Oct 7 20:13:23 2024 +0200
+
+    RedflagsController + Service klara och testade + javadocs
+
+[33mcommit b21f14392227c918138842d31ea2462b43011ad0[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Mon Oct 7 17:25:44 2024 +0200
+
+    GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel.
+
+[33mcommit ab018818adddc0864cc83fc4ea5b4e7ae293264c[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Fri Oct 4 10:44:18 2024 +0200
+
+    application.properties edited. Minor changes to other classes
+
+[33mcommit d01759f6274de9f72d5cf9b5be811b85ffa99e37[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Thu Oct 3 23:01:08 2024 +0200
+
+    Grundläggande packages, dependencies och modeller färdiga.
+
+[33mcommit dcd48c45e6b953aabdfee970a356975b2d99a392[m
+Author: CarolinaMCorreia <carolina.correia363@hotmail.com>
+Date:   Thu Oct 3 18:31:24 2024 +0200
+
+    test
+
+[33mcommit 9b3cf7b4a5268ee99798fe4b4f0ef783380386e3[m
+Author: CarolinaMCorreia <167779656+CarolinaMCorreia@users.noreply.github.com>
+Date:   Thu Oct 3 18:26:39 2024 +0200
+
+    Initial commit
