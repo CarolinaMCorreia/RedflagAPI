@@ -37,7 +37,7 @@ public class SecurityConfig {
         // Tillåt specifika HTTP-metoder
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         // Tillåt headers som Authorization och Content-Type
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+        config.setAllowedHeaders(List.of("*"));
 
         config.setAllowCredentials(true);
 

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="spring.jpa.open-in-view=true">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="CORS-konfiguration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +324,14 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1729258358511</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="CORS-konfiguration">
+      <option name="closed" value="true" />
+      <created>1729269071882</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1729269071882</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +356,8 @@
     <MESSAGE value="Småändringar för tabellerna" />
     <MESSAGE value="ändrade till JDK21" />
     <MESSAGE value="spring.jpa.open-in-view=true" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring.jpa.open-in-view=true" />
+    <MESSAGE value="CORS-konfiguration" />
+    <option name="LAST_COMMIT_MESSAGE" value="CORS-konfiguration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

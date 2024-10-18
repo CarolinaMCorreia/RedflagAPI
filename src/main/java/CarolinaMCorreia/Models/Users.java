@@ -1,5 +1,6 @@
 package CarolinaMCorreia.Models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -32,6 +33,7 @@ public class Users {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+    @JsonManagedReference
     private Set<Redflags> redflags; // En användare kan ha flera red flags
 
 }

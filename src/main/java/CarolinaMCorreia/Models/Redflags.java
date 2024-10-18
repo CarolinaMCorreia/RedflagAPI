@@ -1,5 +1,6 @@
 package CarolinaMCorreia.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
@@ -46,6 +47,7 @@ public class Redflags {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false) // id:t av användaren som skrev inlägget
+    @JsonBackReference
     private Users user; // // Referens till användaren som skapade flaggan
 
     // Enum för kategorier
