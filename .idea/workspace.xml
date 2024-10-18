@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="CORS-konfiguration">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Jsonbackreference">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,6 +80,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="CarolinaMCorreia.Services" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
@@ -331,7 +335,14 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1729269071882</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="Jsonbackreference">
+      <option name="closed" value="true" />
+      <created>1729270265861</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1729270265861</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +368,8 @@
     <MESSAGE value="ändrade till JDK21" />
     <MESSAGE value="spring.jpa.open-in-view=true" />
     <MESSAGE value="CORS-konfiguration" />
-    <option name="LAST_COMMIT_MESSAGE" value="CORS-konfiguration" />
+    <MESSAGE value="Jsonbackreference" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jsonbackreference" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
