@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*") // Tillåt alla ursprung för denna controller
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @Tag(name = "Users", description = "Endpoints for managing users")

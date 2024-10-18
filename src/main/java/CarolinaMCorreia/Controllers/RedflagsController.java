@@ -16,6 +16,7 @@ import java.util.Optional;
  * Exponerar REST API endpoints för att hämta, skapa, uppdatera och ta bort Redflags.
  */
 @RestController
+@CrossOrigin(origins = "*") // Tillåt alla ursprung för denna controller
 @RequestMapping("/redflags")
 @RequiredArgsConstructor // Genererar konstruktor med obligatoriska fält för alla final eller @NonNull argument
 @Tag(name = "Redflags", description = "Endpoints for managing Redflags in relationships")
