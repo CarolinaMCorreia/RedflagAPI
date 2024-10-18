@@ -16,19 +16,13 @@ public class SecurityConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        // Tillåt bara begäranden från https://cityatlas-env.eba-3dsjymff.eu-north-1.elasticbeanstalk.com
-        config.setAllowedOrigins(List.of("*"));
-        // Tillåt specifika HTTP-metoder
+        config.setAllowedOrigins(List.of("*")); // frontend origin
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
-        // Tillåt headers som Authorization och Content-Type
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+        config.setAllowedHeaders(List.of("*"));
+        config.setAllowCredentials(true); // Om du använder sessions/cookies
 
-        config.setAllowCredentials(true);
-
-        // Skapa en källa som matchar alla URL-mönster (/**) med ovanstående konfiguration
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
-
         return new CorsFilter(source);
     }
 }
