@@ -1,6 +1,8 @@
 package CarolinaMCorreia.Models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
@@ -17,6 +19,10 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id"
+)
 public class Redflags {
 
 
@@ -47,7 +53,6 @@ public class Redflags {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false) // id:t av användaren som skrev inlägget
-    @JsonBackReference
     private Users user; // // Referens till användaren som skapade flaggan
 
     // Enum för kategorier

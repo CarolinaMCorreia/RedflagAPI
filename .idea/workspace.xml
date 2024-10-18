@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="securitytest2">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="spring.jpa.open-in-view=true">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +355,21 @@
       <option name="presentableId" value="LOCAL−00022" />
       <updated>1729272984069</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL−00023" summary="spring.jpa.open-in-view=false">
+      <option name="closed" value="true" />
+      <created>1729273350446</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1729273350446</updated>
+    </task>
+    <task id="LOCAL−00024" summary="spring.jpa.open-in-view=true">
+      <option name="closed" value="true" />
+      <created>1729273560486</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1729273560486</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,12 +393,13 @@
     <MESSAGE value="Kompletterade med fler annoteringar." />
     <MESSAGE value="Småändringar för tabellerna" />
     <MESSAGE value="ändrade till JDK21" />
-    <MESSAGE value="spring.jpa.open-in-view=true" />
     <MESSAGE value="CORS-konfiguration" />
     <MESSAGE value="Jsonbackreference" />
     <MESSAGE value="securitytest" />
     <MESSAGE value="securitytest2" />
-    <option name="LAST_COMMIT_MESSAGE" value="securitytest2" />
+    <MESSAGE value="spring.jpa.open-in-view=false" />
+    <MESSAGE value="spring.jpa.open-in-view=true" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring.jpa.open-in-view=true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
