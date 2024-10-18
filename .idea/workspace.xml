@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="README.md klar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="regretted" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +192,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727972450987</updated>
-      <workItem from="1727972452069" duration="120349000" />
+      <workItem from="1727972452069" duration="120772000" />
     </task>
     <task id="LOCAL−00001" summary="Grundläggande packages, dependencies och modeller färdiga.">
       <option name="closed" value="true" />
@@ -326,7 +320,21 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1729013237152</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="tog bort password">
+      <option name="closed" value="true" />
+      <created>1729241041806</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1729241041806</updated>
+    </task>
+    <task id="LOCAL−00020" summary="regretted">
+      <option name="closed" value="true" />
+      <created>1729241248593</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1729241248593</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +359,9 @@
     <MESSAGE value="Småändringar för tabellerna" />
     <MESSAGE value="ändrade till JDK21" />
     <MESSAGE value="README.md klar" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md klar" />
+    <MESSAGE value="tog bort password" />
+    <MESSAGE value="regretted" />
+    <option name="LAST_COMMIT_MESSAGE" value="regretted" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
