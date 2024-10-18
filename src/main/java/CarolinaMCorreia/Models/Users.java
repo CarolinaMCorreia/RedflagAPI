@@ -39,7 +39,6 @@ public class Users {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
-    @JsonManagedReference
     private Set<Redflags> redflags; // En användare kan ha flera red flags
 
 }
