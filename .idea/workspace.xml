@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="OPTIONS to CORS" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="tog bort sprint web security dependency">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Users.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,22 +104,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RedflagAPI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Services" />
-      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
-      <option name="METHOD_NAME" value="getAllRedflags_ShouldReturnListOfRedflags" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RedflagsServiceTest.getOneFlag_ShouldReturnRedflag_WhenRedflagExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RedflagAPI" />
       <extension name="coverage">
@@ -162,6 +152,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsersServiceTest.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.UsersServiceTest" />
+      <option name="METHOD_NAME" value="testCreateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RedflagAPIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="RedflagAPI" />
@@ -172,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" />
+        <item itemvalue="JUnit.UsersServiceTest.testCreateUser" />
         <item itemvalue="JUnit.RedflagsServiceTest.deleteFlag_ShouldDeleteRedflag" />
         <item itemvalue="JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" />
-        <item itemvalue="JUnit.RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" />
         <item itemvalue="JUnit.RedflagsServiceTest.getOneFlag_ShouldReturnRedflag_WhenRedflagExists" />
-        <item itemvalue="JUnit.RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags" />
       </list>
     </recent_temporary>
   </component>
@@ -394,14 +400,20 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1729277043305</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL−00029" summary="tog bort sprint web security dependency">
+      <option name="closed" value="true" />
+      <created>1729278354138</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1729278354138</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GET + POST klara i båda Controller och Service. Tog bort spring security i pom-filen för att hålla applikationen enkel." />
     <MESSAGE value="RedflagsController + Service klara och testade + javadocs" />
     <MESSAGE value="UsersController + Service klara + testade" />
     <MESSAGE value="JUnit tests in place and passed." />
@@ -426,7 +438,8 @@
     <MESSAGE value="glömde ta bort gammal annotation" />
     <MESSAGE value="cascadetype.ALL" />
     <MESSAGE value="OPTIONS to CORS" />
-    <option name="LAST_COMMIT_MESSAGE" value="OPTIONS to CORS" />
+    <MESSAGE value="tog bort sprint web security dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="tog bort sprint web security dependency" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
