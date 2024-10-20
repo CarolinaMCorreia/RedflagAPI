@@ -16,7 +16,6 @@ import java.util.Optional;
  * Exponerar REST API endpoints för att hämta, skapa, uppdatera och ta bort Redflags.
  */
 @RestController
-@CrossOrigin(origins = "*") // Tillåt alla ursprung för denna controller
 @RequestMapping("/redflags")
 @RequiredArgsConstructor // Genererar konstruktor med obligatoriska fält för alla final eller @NonNull argument
 @Tag(name = "Redflags", description = "Endpoints for managing Redflags in relationships")
@@ -57,11 +56,26 @@ public class RedflagsController {
      * @return ResponseEntity som innehåller den sparade Redflag
      */
     @PostMapping
-    @Operation(summary = "Save a redflag", description = "Saves a new redflag")
+    @Operation(summary = "Create a new redflag",
+            description = "Before creating a redflag, you must first fetch a user. " +
+                    "Use the user ID and username from the retrieved user to create the redflag. The input should look like this:\n" +
+                    "{\n" +
+                    "  \"id\": null,\n" +
+                    "  \"description\": \"New Description\",\n" +
+                    "  \"category\": \"BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL or PHYSICAL\",\n" +
+                    "  \"examples\": \"Example Description\",\n" +
+                    "  \"advice\": \"Advice on this behavior\",\n" +
+                    "  \"createdAt\": null,\n" +
+                    "  \"user\": {\n" +
+                    "    \"id\": 1,\n" +
+                    "    \"username\": \"john_doe\"\n" +
+                    "  }\n" +
+                    "}")
     public ResponseEntity<Redflags> saveRedflag(@RequestBody final Redflags redflags) {
         Redflags savedflags = redflagsService.saveFlag(redflags);
         return ResponseEntity.ok(savedflags);
     }
+
 
     /**
      * Endpoint för att uppdatera en befintlig Redflag delvis.
@@ -71,7 +85,20 @@ public class RedflagsController {
      * @return ResponseEntity som innehåller den uppdaterade Redflag
      */
     @PatchMapping("/{id}")
-    @Operation(summary = "Patch a redflag", description = "Updates an existing redflag")
+    @Operation(summary = "Patch a redflag", description = "Updates an existing redflag" + "To update a flag you must first make sure that it exists" +
+                    "Use the user ID and username from the retrieved user earlier to patch the redflag. The input should be something like:" +
+                    "{\n" +
+                    "  \"id\": null,\n" +
+                    "  \"description\": \"New Description\",\n" +
+                    "  \"category\": \"BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL or PHYSICAL\",\n" +
+                    "  \"examples\": \"Example Description\",\n" +
+                    "  \"advice\": \"Advice on this behavior\",\n" +
+                    "  \"createdAt\": \"null\",\n" +
+                    "  \"user\": {\n" +
+                    "    \"id\": 1,\n" +
+                    "    \"username\": \"john_doe\"\n" +
+                    "  }\n" +
+                    "}")
     public ResponseEntity<Redflags> patchRedflag(
             @RequestBody final Redflags redflag,
             @PathVariable final Long id) {

@@ -28,7 +28,9 @@ public class Redflags {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique identifier of the red flag", example = "1")
+    @Schema(description = "Unique identifier of the red flag, assigned automatically by the backend",
+            example = "null",
+            defaultValue = "null", nullable = true)
     private Long id;
 
     @Column(name = "description", nullable = false, length = 100)
@@ -54,7 +56,7 @@ public class Redflags {
 
     @CreationTimestamp // annotation sätter automatiskt värdet av fältet till den aktuella tidpunkten när entiteten skapas
     @Column(name="created_at", updatable = false) // Kommer inte kunna uppdateras.
-    @Schema(description = "Creation timestamp of the red flag", example = "2024-10-20T12:00:00")
+    @Schema(description = "Creation timestamp of the red flag, leave as null. Backend assigns it automatically", example = "null")
     private Timestamp createdAt;
 
     @ManyToOne
