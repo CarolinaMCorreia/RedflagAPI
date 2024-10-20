@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Justerat och testat swagger för redflags">
-      <change afterPath="$PROJECT_DIR$/generated-requests.http" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +56,7 @@
     "JUnit.UsersServiceTest.testDeleteUser.executor": "Run",
     "JUnit.UsersServiceTest.testGetAllUsers.executor": "Run",
     "JUnit.UsersServiceTest.testGetUserById.executor": "Run",
+    "JUnit.UsersServiceTest.testUpdateUser_UserExists.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -100,10 +97,7 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
-    <configuration name="generated-requests | User endpoints:" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="4" requestIdentifier="User endpoints:" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.UsersServiceTest.testUpdateUser_UserNotFound">
     <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -113,7 +107,7 @@
     <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersServiceTest.testUpdateUser_UserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RedflagAPI" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +116,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Services" />
-      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
-      <option name="METHOD_NAME" value="saveFlag_ShouldReturnSavedRedflag" />
+      <option name="MAIN_CLASS_NAME" value="Services.UsersServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateUser_UserExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceTest.testUpdateUser_UserNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.UsersServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateUser_UserNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
+        <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserExists" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
         <item itemvalue="HTTP Request.generated-requests | #6" />
         <item itemvalue="HTTP Request.generated-requests | #5" />
-        <item itemvalue="HTTP Request.generated-requests | User endpoints:" />
-        <item itemvalue="JUnit.RedflagsServiceTest.saveFlag_ShouldReturnSavedRedflag" />
       </list>
     </recent_temporary>
   </component>
@@ -375,14 +385,20 @@
       <option name="presentableId" value="LOCAL−00030" />
       <updated>1729427701593</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL−00031" summary="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation.">
+      <option name="closed" value="true" />
+      <created>1729457167790</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1729457167790</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UsersController + Service klara + testade" />
     <MESSAGE value="JUnit tests in place and passed." />
     <MESSAGE value="Junit tests på plats och går igenom" />
     <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
@@ -407,7 +423,8 @@
     <MESSAGE value="OPTIONS to CORS" />
     <MESSAGE value="tog bort sprint web security dependency" />
     <MESSAGE value="Justerat och testat swagger för redflags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Justerat och testat swagger för redflags" />
+    <MESSAGE value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

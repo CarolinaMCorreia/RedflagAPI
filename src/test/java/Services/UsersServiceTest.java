@@ -89,6 +89,47 @@ class UsersServiceTest {
         verify(usersRepo, times(1)).delete(userToDelete); // Ensure delete was called once
     }
 
+    @Test
+    public void testUpdateUser_UserExists() {
+        Users existingUser = new Users(); // Create a new Users instance for the test
+        existingUser.setId(1L);
+        existingUser.setUsername("testUser");
+        existingUser.setPassword("testPassword");
 
+        // Arrange
+        when(usersRepo.findById(1L)).thenReturn(Optional.of(existingUser));
+
+        // UserDetails with updated information
+        Users userDetails = new Users();
+        userDetails.setUsername("updatedUser");
+        userDetails.setPassword("newPassword");
+
+        // Ensure save returns the updated user
+        when(usersRepo.save(existingUser)).thenReturn(existingUser);
+
+        // Act
+        Users updatedUser = usersService.updateUser(1L, userDetails);
+
+        // Assert
+        assertEquals("updatedUser", updatedUser.getUsername());
+        assertEquals("newPassword", updatedUser.getPassword());
+        verify(usersRepo).save(existingUser);
+    }
+
+
+    @Test
+    public void testUpdateUser_UserNotFound() {
+        Users userDetails = new Users();
+        userDetails.setUsername("updatedUser");
+
+        // Arrange
+        when(usersRepo.findById(1L)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            usersService.updateUser(1L, userDetails);
+        });
+        assertEquals("User not found with id 1", exception.getMessage());
+    }
 
 }
