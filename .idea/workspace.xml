@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation.">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Kompletterade testeri UsersServiceTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Services/UsersServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,7 @@
     "JUnit.UsersServiceTest.testGetAllUsers.executor": "Run",
     "JUnit.UsersServiceTest.testGetUserById.executor": "Run",
     "JUnit.UsersServiceTest.testUpdateUser_UserExists.executor": "Run",
+    "JUnit.UsersServiceTest.testUpdateUser_UserNotFound.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -97,7 +100,7 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersServiceTest.testUpdateUser_UserNotFound">
+  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
     <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -392,14 +395,20 @@
       <option name="presentableId" value="LOCAL−00031" />
       <updated>1729457167790</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL−00032" summary="Kompletterade testeri UsersServiceTest">
+      <option name="closed" value="true" />
+      <created>1729458291210</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1729458291210</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JUnit tests in place and passed." />
     <MESSAGE value="Junit tests på plats och går igenom" />
     <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
     <MESSAGE value="Superlinter tillagd i Github actions" />
@@ -424,7 +433,8 @@
     <MESSAGE value="tog bort sprint web security dependency" />
     <MESSAGE value="Justerat och testat swagger för redflags" />
     <MESSAGE value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
+    <MESSAGE value="Kompletterade testeri UsersServiceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kompletterade testeri UsersServiceTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

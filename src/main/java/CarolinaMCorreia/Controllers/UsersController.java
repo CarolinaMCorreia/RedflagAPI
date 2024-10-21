@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com")
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @Tag(name = "Users", description = "Endpoints for managing users")
