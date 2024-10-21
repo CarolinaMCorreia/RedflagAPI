@@ -37,6 +37,8 @@ För att köra applikationen, följ dessa steg:
 Applikationen kommer nu att köras på http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/. 
 Testa med de olika endpoints som finns i Swagger-UI genom att lägga till /swagger-ui/index.html i slutet av URL:en.
 
+Det finns även en generated-requests.http-fil i roten av projektet som ger en tydligare syntax till swagger json-bodys.
+
 
 ### Deployment till AWS Elastic Beanstalk
 
