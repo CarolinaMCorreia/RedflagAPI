@@ -17,7 +17,8 @@ public class SecurityConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "http://localhost:5500"));
+        //Släpper igenom både Live Server för frontend-klienten och AWS.
+        config.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true); // Om du använder sessions/cookies

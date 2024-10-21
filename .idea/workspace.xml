@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Kompletterade testeri UsersServiceTest">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="WebConfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/generated-requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/WebConfig.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +18,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
@@ -402,14 +401,20 @@
       <option name="presentableId" value="LOCAL−00032" />
       <updated>1729458291210</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL−00033" summary="WebConfig">
+      <option name="closed" value="true" />
+      <created>1729499349272</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1729499349272</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Junit tests på plats och går igenom" />
     <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
     <MESSAGE value="Superlinter tillagd i Github actions" />
     <MESSAGE value="Build-jobbet för applikationen tillagd. package-info filer i varje dir" />
@@ -434,7 +439,8 @@
     <MESSAGE value="Justerat och testat swagger för redflags" />
     <MESSAGE value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
     <MESSAGE value="Kompletterade testeri UsersServiceTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kompletterade testeri UsersServiceTest" />
+    <MESSAGE value="WebConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="WebConfig" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
