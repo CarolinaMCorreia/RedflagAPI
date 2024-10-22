@@ -56,37 +56,24 @@ public class RedflagsService {
      * @return Den uppdaterade Redflag.
      * @throws RuntimeException Om Redflag med det angivna ID:t inte hittas.
      */
-    public Redflags patchRedflag(final Redflags redflag, final Long id) {
+    public Redflags updateRedflag(final Redflags redflag, final Long id) {
         Optional<Redflags> currentRedflag = redflagsRepo.findById(id);
 
         if (currentRedflag.isPresent()) {
             Redflags existingRedflag = currentRedflag.get();
 
-            if (redflag.getDescription() != null
-                    && !redflag.getDescription().equals(existingRedflag.getDescription())) {
-                existingRedflag.setDescription(redflag.getDescription());
-            }
-
-            if (redflag.getCategory() != null
-                    && !redflag.getCategory().equals(existingRedflag.getCategory())) {
-                existingRedflag.setCategory(redflag.getCategory());
-            }
-
-            if (redflag.getExamples() != null
-                    && !redflag.getExamples().equals(existingRedflag.getExamples())) {
-                existingRedflag.setExamples(redflag.getExamples());
-            }
-
-            if (redflag.getAdvice() != null
-                    && !redflag.getAdvice().equals(existingRedflag.getAdvice())) {
-                existingRedflag.setAdvice(redflag.getAdvice());
-            }
+            // Sätt alla fält från det inkommande redflag-objektet
+            existingRedflag.setDescription(redflag.getDescription());
+            existingRedflag.setCategory(redflag.getCategory());
+            existingRedflag.setExamples(redflag.getExamples());
+            existingRedflag.setAdvice(redflag.getAdvice());
 
             return redflagsRepo.save(existingRedflag);
         } else {
             throw new RuntimeException("Redflag with ID " + id + " not found");
         }
     }
+
 
     /**
      * Tar bort en Redflag baserat på ID.

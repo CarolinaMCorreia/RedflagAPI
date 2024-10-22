@@ -113,18 +113,6 @@ public class ApiClient {
         }
     }
 
-    /*
-        // READ ONE - Hämtar en användare baserat på ID
-    public void getUserById(Long id) {
-        Users user = restTemplate.getForObject(USERS_URL + "/" + id, Users.class);
-        if (user != null) {
-            System.out.println("Retrieved User: " + user);
-        } else {
-            System.out.println("User not found.");
-        }
-    }
-     */
-
     // READ ONE - Hämtar en redflag baserat på ID
     public void getRedflagById(Long id) {
         Redflags redflag = restTemplate.getForObject(FLAGS_URL + "/" + id, Redflags.class);
@@ -135,9 +123,27 @@ public class ApiClient {
         }
     }
 
+/*
+    public void updateUser(Long id, String username, String password) {
+        Users updatedUser = new Users();
+        updatedUser.setUsername(username);
+        updatedUser.setPassword(password);
+        restTemplate.put(USERS_URL + "/" + id, updatedUser);
+        System.out.println("Updated User with ID: " + id);
+    }
+    */
 
+    public void updateRedflag(Long id, String description, String category, String examples, String advice) {
+        Redflags updatedRedflag = new Redflags();
+        updatedRedflag.setId(id); // Sätt ID:t för den Redflag som ska uppdateras
+        updatedRedflag.setDescription(description);
+        updatedRedflag.setCategory(Redflags.Category.valueOf(category)); // Konvertera String till Enum
+        updatedRedflag.setExamples(examples);
+        updatedRedflag.setAdvice(advice);
 
-
+        restTemplate.put(FLAGS_URL + "/" + id, updatedRedflag); // Skicka PUT-begäran till backend
+        System.out.println("Updated Redflag with ID: " + id);
+    }
 
 
 
@@ -216,8 +222,22 @@ public class ApiClient {
                     Long redflagId = scanner.nextLong();
                     client.getRedflagById(redflagId);
                     break;
+                case 9:
+                    System.out.print("Enter Redflag ID to update: ");
+                    Long updateRedflagId = scanner.nextLong();
+                    scanner.nextLine(); // Clear the buffer
+                    System.out.print("Enter new description: ");
+                    String newDescription = scanner.nextLine();
+                    System.out.print("Enter new category (BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL, PHYSICAL): ");
+                    String newCategory = scanner.nextLine();
+                    System.out.print("Enter new examples: ");
+                    String newExamples = scanner.nextLine();
+                    System.out.print("Enter new advice: ");
+                    String newAdvice = scanner.nextLine();
 
-
+                    // Anropa updateRedflag metoden här
+                    client.updateRedflag(updateRedflagId, newDescription, newCategory, newExamples, newAdvice);
+                    break;
 
                     /*
                 case 6:

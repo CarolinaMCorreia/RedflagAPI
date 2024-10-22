@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Fixade till klienten. Nu funkar alla user endpoints">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Arbetet på klienten fortsätter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Models/Redflags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,7 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiClient">
+  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
     <configuration name="ApiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CarolinaMCorreia.client.ApiClient" />
       <module name="RedflagAPI" />
@@ -117,8 +119,21 @@
     <configuration name="generated-requests | Getting Started" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="2" requestIdentifier="Getting Started" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
-      <method v="2" />
+    <configuration name="RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Services" />
+      <option name="MAIN_CLASS_NAME" value="Services.RedflagsServiceTest" />
+      <option name="METHOD_NAME" value="patchRedflag_ShouldUpdateExistingRedflag" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UsersServiceTest.testUpdateUser_UserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RedflagAPI" />
@@ -162,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" />
         <item itemvalue="Application.ApiClient" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
         <item itemvalue="HTTP Request.generated-requests | Getting Started" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserExists" />
-        <item itemvalue="HTTP Request.generated-requests | #7" />
       </list>
     </recent_temporary>
   </component>
@@ -440,14 +455,20 @@
       <option name="presentableId" value="LOCAL−00036" />
       <updated>1729593044263</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL−00037" summary="Arbetet på klienten fortsätter">
+      <option name="closed" value="true" />
+      <created>1729600647117</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1729600647117</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ändrade till rätt version" />
     <MESSAGE value="Ändrade maven-jar-plugin till tidigare version" />
     <MESSAGE value="Lade till Packeterings-jobbet i mavenBuild.yml" />
     <MESSAGE value="La till Swagger" />
@@ -472,7 +493,8 @@
     <MESSAGE value="Servicen släpper nu igenom AWS (ändrade i SecurityConfig)." />
     <MESSAGE value="Testar med en konsollklient" />
     <MESSAGE value="Fixade till klienten. Nu funkar alla user endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixade till klienten. Nu funkar alla user endpoints" />
+    <MESSAGE value="Arbetet på klienten fortsätter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arbetet på klienten fortsätter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

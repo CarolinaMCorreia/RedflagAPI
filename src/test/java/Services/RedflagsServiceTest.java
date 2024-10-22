@@ -122,7 +122,7 @@ public class RedflagsServiceTest {
         when(redflagsRepo.save(any(Redflags.class))).thenReturn(updatedRedflag);
 
         // Act
-        Redflags result = redflagsService.patchRedflag(updatedRedflag, 1L);
+        Redflags result = redflagsService.updateRedflag(updatedRedflag, 1L);
 
         // Assert
         assertEquals("Updated Description", result.getDescription());

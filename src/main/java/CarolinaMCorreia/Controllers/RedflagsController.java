@@ -100,12 +100,14 @@ public class RedflagsController {
                     "    \"username\": \"john_doe\"\n" +
                     "  }\n" +
                     "}")
-    public ResponseEntity<Redflags> patchRedflag(
+    @PutMapping("/{id}") // Ändra till @PutMapping för PUT-anrop
+    public ResponseEntity<Redflags> updateRedflag(
             @RequestBody final Redflags redflag,
             @PathVariable final Long id) {
-        Redflags patchedRedflag = redflagsService.patchRedflag(redflag, id);
-        return ResponseEntity.ok(patchedRedflag);
+        Redflags updatedRedflag = redflagsService.updateRedflag(redflag, id);
+        return ResponseEntity.ok(updatedRedflag);
     }
+
 
     /**
      * Endpoint för att ta bort en Redflag baserat på ID.
