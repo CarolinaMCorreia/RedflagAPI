@@ -9,7 +9,9 @@ import java.util.Scanner;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/users"; // bas-url
+    private static final String USERS_URL = "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/users"; //Users bas-url
+    private static final String FLAGS_URL = "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/redflags"; //Redflags bas-url
+
     //private static final String BASE_URL = "http://localhost:5000/users"; // bas-url
 
     private final RestTemplate restTemplate;
@@ -18,19 +20,22 @@ public class ApiClient {
         this.restTemplate = new RestTemplate();
     }
 
+    ///////////////////USERS///////////////////////////////////////////////////////////////
+
+
     // CREATE - Använd POST för att skapa en användare
     public void createUser(String username, String password) {
         Users newUser = new Users();
         newUser.setUsername(username);
         newUser.setPassword(password); // Du kan hantera lösenordshashning här om det behövs
 
-        Users response = restTemplate.postForObject(BASE_URL, newUser, Users.class);
+        Users response = restTemplate.postForObject(USERS_URL, newUser, Users.class);
         System.out.println("Created User: " + response);
     }
 
     // READ ALL - Hämtar alla användare
     public void getAllUsers() {
-        Users[] users = restTemplate.getForObject(BASE_URL, Users[].class);
+        Users[] users = restTemplate.getForObject(USERS_URL, Users[].class);
         if (users != null) {
             for (Users user : users) {
                 System.out.println(user);
@@ -42,7 +47,7 @@ public class ApiClient {
 
     // READ ONE - Hämtar en användare baserat på ID
     public void getUserById(Long id) {
-        Users user = restTemplate.getForObject(BASE_URL + "/" + id, Users.class);
+        Users user = restTemplate.getForObject(USERS_URL + "/" + id, Users.class);
         if (user != null) {
             System.out.println("Retrieved User: " + user);
         } else {
@@ -54,16 +59,88 @@ public class ApiClient {
         Users updatedUser = new Users();
         updatedUser.setUsername(username);
         updatedUser.setPassword(password);
-        restTemplate.put(BASE_URL + "/" + id, updatedUser);
+        restTemplate.put(USERS_URL + "/" + id, updatedUser);
         System.out.println("Updated User with ID: " + id);
     }
 
 
     // DELETE - Tar bort en användare baserat på ID
     public void deleteUser(Long id) {
-        restTemplate.delete(BASE_URL + "/" + id);
+        restTemplate.delete(USERS_URL + "/" + id);
         System.out.println("Deleted User with ID: " + id);
     }
+
+    ///////////////////REDFLAGS///////////////////////////////////////////////////////////////
+
+    public void createRedflag(String description, String category, String examples, String advice, Long userId) {
+        // Fetch user by ID to verify if it exists
+        Users user = restTemplate.getForObject(USERS_URL + "/" + userId, Users.class);
+
+        if (user == null) {
+            System.out.println("User not found. Please check the user ID.");
+            return; // Exit the method if user not found
+        }
+
+        // Create a new Redflag object
+        Redflags newRedflag = new Redflags();
+        newRedflag.setDescription(description);
+        newRedflag.setCategory(Redflags.Category.valueOf(category)); // Convert String to Enum
+        newRedflag.setExamples(examples);
+        newRedflag.setAdvice(advice);
+
+        // Set the found user to the redflag
+        newRedflag.setUser(user);
+
+        // Send POST request to the redflags endpoint
+        Redflags response = restTemplate.postForObject(FLAGS_URL, newRedflag, Redflags.class);
+
+        if (response != null) {
+            System.out.println("Created Redflag: " + response);
+        } else {
+            System.out.println("Failed to create Redflag.");
+        }
+    }
+
+    // READ ALL - Hämtar alla redflags
+    public void getAllRedflags() {
+        Redflags[] redflags = restTemplate.getForObject(FLAGS_URL, Redflags[].class);
+        if (redflags != null) {
+            for (Redflags flag : redflags) {
+                System.out.println(flag);
+            }
+        } else {
+            System.out.println("No redflags found.");
+        }
+    }
+
+    /*
+        // READ ONE - Hämtar en användare baserat på ID
+    public void getUserById(Long id) {
+        Users user = restTemplate.getForObject(USERS_URL + "/" + id, Users.class);
+        if (user != null) {
+            System.out.println("Retrieved User: " + user);
+        } else {
+            System.out.println("User not found.");
+        }
+    }
+     */
+
+    // READ ONE - Hämtar en redflag baserat på ID
+    public void getRedflagById(Long id) {
+        Redflags redflag = restTemplate.getForObject(FLAGS_URL + "/" + id, Redflags.class);
+        if (redflag != null) {
+            System.out.println("Retrieved Redflag: " + redflag);
+        } else {
+            System.out.println("Redflag not found.");
+        }
+    }
+
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -76,7 +153,12 @@ public class ApiClient {
             System.out.println("3. Get User by ID");
             System.out.println("4. Update User");
             System.out.println("5. Delete User");
-            System.out.println("6. Exit");
+            System.out.println("6. Create Redflag");
+            System.out.println("7. Get All Redflags");
+            System.out.println("8. Get Redflag by ID");
+            System.out.println("9. Update Redflag");
+            System.out.println("10. Delete Redflag");
+            System.out.println("11. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Clear the buffer
@@ -113,8 +195,34 @@ public class ApiClient {
                     client.deleteUser(deleteId);
                     break;
                 case 6:
+                    // Create Redflag
+                    System.out.print("Enter Redflag description: ");
+                    String redflagDescription = scanner.nextLine();
+                    System.out.print("Enter Redflag category (BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL, PHYSICAL): ");
+                    String redflagCategory = scanner.nextLine();
+                    System.out.print("Enter examples: ");
+                    String redflagExamples = scanner.nextLine();
+                    System.out.print("Enter advice: ");
+                    String redflagAdvice = scanner.nextLine();
+                    System.out.print("Enter User ID for the Redflag: ");
+                    Long userId = scanner.nextLong();
+                    client.createRedflag(redflagDescription, redflagCategory, redflagExamples, redflagAdvice, userId);
+                    break;
+                case 7:
+                    client.getAllRedflags();
+                    break;
+                case 8:
+                    System.out.print("Enter Redflag ID: ");
+                    Long redflagId = scanner.nextLong();
+                    client.getRedflagById(redflagId);
+                    break;
+
+
+
+                    /*
+                case 6:
                     System.out.println("Exiting...");
-                    return;
+                    return;*/
                 default:
                     System.out.println("Invalid option. Try again.");
             }

@@ -2,6 +2,7 @@ package CarolinaMCorreia.Models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
@@ -61,6 +62,7 @@ public class Redflags {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false) // id:t av användaren som skrev inlägget
+    @JsonIgnore
     @Schema(description = "User who created the red flag")
     private Users user; // // Referens till användaren som skapade flaggan
 
