@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Arbetet på klienten fortsätter 1">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Ändrade PATCH till PUT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
+  <component name="RunManager" selected="Application.ApiClient">
     <configuration name="ApiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CarolinaMCorreia.client.ApiClient" />
       <module name="RedflagAPI" />
@@ -473,14 +473,20 @@
       <option name="presentableId" value="LOCAL−00039" />
       <updated>1729603322371</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL−00040" summary="Ändrade PATCH till PUT">
+      <option name="closed" value="true" />
+      <created>1729605054605</created>
+      <option name="number" value="LOCAL−00040" />
+      <option name="presentableId" value="LOCAL−00040" />
+      <updated>1729605054605</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lade till Packeterings-jobbet i mavenBuild.yml" />
     <MESSAGE value="La till Swagger" />
     <MESSAGE value="Kompletterade med fler annoteringar." />
     <MESSAGE value="Småändringar för tabellerna" />
@@ -505,7 +511,8 @@
     <MESSAGE value="Fixade till klienten. Nu funkar alla user endpoints" />
     <MESSAGE value="Arbetet på klienten fortsätter" />
     <MESSAGE value="Arbetet på klienten fortsätter 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arbetet på klienten fortsätter 1" />
+    <MESSAGE value="Ändrade PATCH till PUT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ändrade PATCH till PUT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

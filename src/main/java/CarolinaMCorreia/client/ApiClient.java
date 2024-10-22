@@ -84,11 +84,10 @@ public class ApiClient {
         // Create a new Redflag object
         Redflags newRedflag = new Redflags();
         newRedflag.setDescription(description);
-        newRedflag.setCategory(Redflags.Category.valueOf(category)); // Convert String to Enum
+        newRedflag.setCategory(Redflags.Category.valueOf(category));
         newRedflag.setExamples(examples);
         newRedflag.setAdvice(advice);
 
-        // Set the found user to the redflag
         newRedflag.setUser(user);
 
         // Send POST request to the redflags endpoint
@@ -123,16 +122,6 @@ public class ApiClient {
         }
     }
 
-/*
-    public void updateUser(Long id, String username, String password) {
-        Users updatedUser = new Users();
-        updatedUser.setUsername(username);
-        updatedUser.setPassword(password);
-        restTemplate.put(USERS_URL + "/" + id, updatedUser);
-        System.out.println("Updated User with ID: " + id);
-    }
-    */
-
     public void updateRedflag(Long id, String description, String category, String examples, String advice) {
         Redflags updatedRedflag = new Redflags();
         updatedRedflag.setId(id); // Sätt ID:t för den Redflag som ska uppdateras
@@ -144,6 +133,13 @@ public class ApiClient {
         restTemplate.put(FLAGS_URL + "/" + id, updatedRedflag); // Skicka PUT-begäran till backend
         System.out.println("Updated Redflag with ID: " + id);
     }
+
+    // DELETE - Tar bort en användare baserat på ID
+    public void deleteRedflag(Long id) {
+        restTemplate.delete(FLAGS_URL + "/" + id);
+        System.out.println("Deleted Redflag with ID: " + id);
+    }
+
 
 
 
@@ -238,11 +234,14 @@ public class ApiClient {
                     // Anropa updateRedflag metoden här
                     client.updateRedflag(updateRedflagId, newDescription, newCategory, newExamples, newAdvice);
                     break;
-
-                    /*
-                case 6:
+                case 10:
+                    System.out.print("Enter Redflag ID to delete: ");
+                    Long deleteFlagId = scanner.nextLong();
+                    client.deleteRedflag(deleteFlagId);
+                    break;
+                case 11:
                     System.out.println("Exiting...");
-                    return;*/
+                    return;
                 default:
                     System.out.println("Invalid option. Try again.");
             }
