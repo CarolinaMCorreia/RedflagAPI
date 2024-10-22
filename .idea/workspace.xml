@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Arbetet på klienten fortsätter">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Arbetet på klienten fortsätter 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/RedflagsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Services/RedflagsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" />
         <item itemvalue="Application.ApiClient" />
+        <item itemvalue="JUnit.RedflagsServiceTest.patchRedflag_ShouldUpdateExistingRedflag" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
         <item itemvalue="HTTP Request.generated-requests | Getting Started" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserExists" />
@@ -462,14 +458,20 @@
       <option name="presentableId" value="LOCAL−00037" />
       <updated>1729600647117</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL−00038" summary="Arbetet på klienten fortsätter 1">
+      <option name="closed" value="true" />
+      <created>1729602269108</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1729602269108</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ändrade maven-jar-plugin till tidigare version" />
     <MESSAGE value="Lade till Packeterings-jobbet i mavenBuild.yml" />
     <MESSAGE value="La till Swagger" />
     <MESSAGE value="Kompletterade med fler annoteringar." />
@@ -494,7 +496,8 @@
     <MESSAGE value="Testar med en konsollklient" />
     <MESSAGE value="Fixade till klienten. Nu funkar alla user endpoints" />
     <MESSAGE value="Arbetet på klienten fortsätter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arbetet på klienten fortsätter" />
+    <MESSAGE value="Arbetet på klienten fortsätter 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arbetet på klienten fortsätter 1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
