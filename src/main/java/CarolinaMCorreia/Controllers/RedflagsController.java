@@ -85,28 +85,35 @@ public class RedflagsController {
      * @param id ID:t på den Redflag som ska uppdateras
      * @return ResponseEntity som innehåller den uppdaterade Redflag
      */
-    @PatchMapping("/{id}")
-    @Operation(summary = "Patch a redflag", description = "Updates an existing redflag" + "To update a flag you must first make sure that it exists" +
-                    "Use the user ID and username from the retrieved user earlier to patch the redflag. The input should be something like:" +
-                    "{\n" +
-                    "  \"id\": null,\n" +
-                    "  \"description\": \"New Description\",\n" +
-                    "  \"category\": \"BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL or PHYSICAL\",\n" +
-                    "  \"examples\": \"Example Description\",\n" +
-                    "  \"advice\": \"Advice on this behavior\",\n" +
-                    "  \"createdAt\": \"null\",\n" +
-                    "  \"user\": {\n" +
-                    "    \"id\": 1,\n" +
-                    "    \"username\": \"john_doe\"\n" +
-                    "  }\n" +
-                    "}")
-    @PutMapping("/{id}") // Ändra till @PutMapping för PUT-anrop
+    /**
+     * Endpoint för att uppdatera en befintlig Redflag.
+     *
+     * @param redflag Redflag-objektet med uppdaterade fält
+     * @param id ID:t på den Redflag som ska uppdateras
+     * @return ResponseEntity som innehåller den uppdaterade Redflag
+     */
+    @PutMapping("/{id}") // Använd enbart @PutMapping för PUT-anrop
+    @Operation(summary = "Update a redflag", description = "Updates an existing redflag. To update a flag you must first make sure that it exists. " +
+            "The input should be something like:" +
+            "{\n" +
+            "  \"id\": null,\n" +
+            "  \"description\": \"New Description\",\n" +
+            "  \"category\": \"BEHAVIOR, COMMUNICATION, EMOTIONAL, FINANCIAL or PHYSICAL\",\n" +
+            "  \"examples\": \"Example Description\",\n" +
+            "  \"advice\": \"Advice on this behavior\",\n" +
+            "  \"createdAt\": \"null\",\n" +
+            "  \"user\": {\n" +
+            "    \"id\": 1,\n" +
+            "    \"username\": \"john_doe\"\n" +
+            "  }\n" +
+            "}")
     public ResponseEntity<Redflags> updateRedflag(
             @RequestBody final Redflags redflag,
             @PathVariable final Long id) {
         Redflags updatedRedflag = redflagsService.updateRedflag(redflag, id);
         return ResponseEntity.ok(updatedRedflag);
     }
+
 
 
     /**

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Arbetet på klienten fortsätter 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/RedflagsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -465,7 +466,14 @@
       <option name="presentableId" value="LOCAL−00038" />
       <updated>1729602269108</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL−00039" summary="Arbetet på klienten fortsätter 1">
+      <option name="closed" value="true" />
+      <created>1729603322371</created>
+      <option name="number" value="LOCAL−00039" />
+      <option name="presentableId" value="LOCAL−00039" />
+      <updated>1729603322371</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
