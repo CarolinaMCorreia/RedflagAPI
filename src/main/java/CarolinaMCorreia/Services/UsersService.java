@@ -50,34 +50,29 @@ public class UsersService {
      * Update an existing user.
      *
      * @param id         the ID of the user to update.
-     * @param userDetails the user object containing the updated details.
+     * @param updatedUser the user object containing the updated details.
      * @return the updated user.
      * @throws RuntimeException if the user is not found.
      */
-    public Users updateUser(Long id, Users userDetails) {
-        Optional<Users> optionalUser = usersRepo.findById(id);
+    public Users updateUser(Long id, Users updatedUser) {
+        Optional<Users> userOptional = usersRepo.findById(id); // Attempt to find user by ID
 
-        if (optionalUser.isPresent()) {
-            Users existingUser = optionalUser.get();
+        if (userOptional.isPresent()) { // Check if user exists
+            Users existingUser = userOptional.get(); // Retrieve the existing user
 
-            // Update fields in the existing user
-            if (userDetails.getUsername() != null && !userDetails.getUsername().isBlank()) {
-                existingUser.setUsername(userDetails.getUsername());
-            }
-            if (userDetails.getPassword() != null && !userDetails.getPassword().isBlank()) {
-                existingUser.setPassword(userDetails.getPassword()); // Make sure to hash the password if needed
-            }
+            // Update fields directly from updatedUser (expecting a full object)
+            existingUser.setUsername(updatedUser.getUsername()); // Set new username (must not be null)
+            existingUser.setPassword(updatedUser.getPassword()); // Set new password (must not be null)
 
-            // Handle redflags if necessary
-            if (userDetails.getRedflags() != null) {
-                existingUser.setRedflags(userDetails.getRedflags()); // Set new redflags
-            }
-
-            return usersRepo.save(existingUser); // Save the updated user
+            // Save the updated user
+            return usersRepo.save(existingUser);
         } else {
-            throw new RuntimeException("User not found with id " + id);
+            throw new RuntimeException("User with ID " + id + " not found"); // Handle user not found
         }
     }
+
+
+
 
     /**
      * Delete a user by their ID.

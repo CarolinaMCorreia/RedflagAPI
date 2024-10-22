@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="WebConfig">
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Servicen släpper nu igenom AWS (ändrade i SecurityConfig).">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/generated-requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +44,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ApiClient.executor": "Run",
     "HTTP Request.generated-requests | #5.executor": "Run",
     "HTTP Request.generated-requests | #6.executor": "Run",
     "HTTP Request.generated-requests | #7.executor": "Run",
+    "HTTP Request.generated-requests | Getting Started.executor": "Run",
     "HTTP Request.generated-requests | User endpoints:.executor": "Run",
     "JUnit.RedflagsServiceTest.deleteFlag_ShouldDeleteRedflag.executor": "Run",
     "JUnit.RedflagsServiceTest.getAllRedflags_ShouldReturnListOfRedflags.executor": "Run",
@@ -99,11 +101,21 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RedflagAPIApplication">
-    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.UsersServiceTest.testUpdateUser_UserNotFound">
+    <configuration name="ApiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CarolinaMCorreia.client.ApiClient" />
+      <module name="RedflagAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CarolinaMCorreia.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="6" requestIdentifier="#6" runType="Run single request">
+    <configuration name="generated-requests | Getting Started" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="2" requestIdentifier="Getting Started" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
@@ -152,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
+        <item itemvalue="Application.ApiClient" />
+        <item itemvalue="HTTP Request.generated-requests | Getting Started" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserExists" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
-        <item itemvalue="HTTP Request.generated-requests | #6" />
-        <item itemvalue="HTTP Request.generated-requests | #5" />
       </list>
     </recent_temporary>
   </component>
@@ -408,14 +420,20 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1729499349272</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL−00034" summary="Servicen släpper nu igenom AWS (ändrade i SecurityConfig).">
+      <option name="closed" value="true" />
+      <created>1729505526196</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1729505526196</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lade till maven-jar-plugin som används för att skapa JAR-fil för Github actions" />
     <MESSAGE value="Superlinter tillagd i Github actions" />
     <MESSAGE value="Build-jobbet för applikationen tillagd. package-info filer i varje dir" />
     <MESSAGE value="Ändrade till rätt version" />
@@ -440,7 +458,8 @@
     <MESSAGE value="generated-requests.http tillagd på grund av irriterande problem med Swagger documentation." />
     <MESSAGE value="Kompletterade testeri UsersServiceTest" />
     <MESSAGE value="WebConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="WebConfig" />
+    <MESSAGE value="Servicen släpper nu igenom AWS (ändrade i SecurityConfig)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Servicen släpper nu igenom AWS (ändrade i SecurityConfig)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

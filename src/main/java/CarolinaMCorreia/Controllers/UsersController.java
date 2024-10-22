@@ -68,14 +68,15 @@ public class UsersController {
      * @param userDetails the details to update the user with.
      * @return ResponseEntity containing the updated user.
      */
-    @PatchMapping("/{id}")
-    @Operation(summary = "Patch a user", description = "Updates an existing user")
-    public ResponseEntity<Users> patchUser(
+    @PutMapping("/{id}")
+    @Operation(summary = "Update a user", description = "Updates an existing user")
+    public ResponseEntity<Users> updateUser(
             @PathVariable final Long id,
-            @RequestBody final Users userDetails) {
+            @Valid @RequestBody final Users userDetails) {
         Users updatedUser = usersService.updateUser(id, userDetails);
         return ResponseEntity.ok(updatedUser);
     }
+
 
     /**
      * Delete a user by their ID.

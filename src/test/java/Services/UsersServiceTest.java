@@ -129,7 +129,7 @@ class UsersServiceTest {
         RuntimeException exception = assertThrows(RuntimeException.class, () -> {
             usersService.updateUser(1L, userDetails);
         });
-        assertEquals("User not found with id 1", exception.getMessage());
+        assertEquals("User with ID 1 not found", exception.getMessage());
     }
 
 }
