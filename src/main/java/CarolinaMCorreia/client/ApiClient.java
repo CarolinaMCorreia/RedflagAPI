@@ -50,23 +50,14 @@ public class ApiClient {
         }
     }
 
-    // UPDATE (PATCH) - Uppdaterar en användare delvis baserat på ID
     public void updateUser(Long id, String username, String password) {
-        // Skapa ett objekt för att uppdatera användaren
         Users updatedUser = new Users();
-
-        // Sätt endast de fält som behöver uppdateras
-        if (username != null) {
-            updatedUser.setUsername(username); // Sätt nytt användarnamn
-        }
-        if (password != null) {
-            updatedUser.setPassword(password); // Sätt nytt lösenord (glöm inte att hasha om det behövs)
-        }
-
-        // Använd PATCH istället för PUT
-        restTemplate.patchForObject(BASE_URL + "/" + id, updatedUser, Users.class);
+        updatedUser.setUsername(username);
+        updatedUser.setPassword(password);
+        restTemplate.put(BASE_URL + "/" + id, updatedUser);
         System.out.println("Updated User with ID: " + id);
     }
+
 
     // DELETE - Tar bort en användare baserat på ID
     public void deleteUser(Long id) {

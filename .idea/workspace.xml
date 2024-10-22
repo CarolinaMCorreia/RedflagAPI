@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Servicen släpper nu igenom AWS (ändrade i SecurityConfig).">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
+    <list default="true" id="59d93390-1fc1-460d-a122-38cb0364f3c0" name="Changes" comment="Testar med en konsollklient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/Services/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarolinaMCorreia/client/ApiClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <recent name="CarolinaMCorreia.Config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersServiceTest.testUpdateUser_UserNotFound">
+  <component name="RunManager" selected="Application.ApiClient">
     <configuration name="ApiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CarolinaMCorreia.client.ApiClient" />
       <module name="RedflagAPI" />
@@ -163,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
         <item itemvalue="Application.ApiClient" />
+        <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserNotFound" />
         <item itemvalue="HTTP Request.generated-requests | Getting Started" />
         <item itemvalue="JUnit.UsersServiceTest.testUpdateUser_UserExists" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
@@ -427,14 +425,20 @@
       <option name="presentableId" value="LOCAL−00034" />
       <updated>1729505526196</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL−00035" summary="Testar med en konsollklient">
+      <option name="closed" value="true" />
+      <created>1729592292638</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1729592292638</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Superlinter tillagd i Github actions" />
     <MESSAGE value="Build-jobbet för applikationen tillagd. package-info filer i varje dir" />
     <MESSAGE value="Ändrade till rätt version" />
     <MESSAGE value="Ändrade maven-jar-plugin till tidigare version" />
@@ -459,7 +463,8 @@
     <MESSAGE value="Kompletterade testeri UsersServiceTest" />
     <MESSAGE value="WebConfig" />
     <MESSAGE value="Servicen släpper nu igenom AWS (ändrade i SecurityConfig)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Servicen släpper nu igenom AWS (ändrade i SecurityConfig)." />
+    <MESSAGE value="Testar med en konsollklient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testar med en konsollklient" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
