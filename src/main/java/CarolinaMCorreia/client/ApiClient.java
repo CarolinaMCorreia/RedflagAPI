@@ -231,7 +231,7 @@ public class ApiClient {
                     System.out.print("Enter new advice: ");
                     String newAdvice = scanner.nextLine();
 
-                    // Anropa updateRedflag metoden här
+                    // Anropa updateRedflag metoden hä
                     client.updateRedflag(updateRedflagId, newDescription, newCategory, newExamples, newAdvice);
                     break;
                 case 10:
