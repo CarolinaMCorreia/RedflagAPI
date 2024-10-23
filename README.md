@@ -4,6 +4,7 @@
 
 - [Beskrivning](#beskrivning)
 - [Installation](#installation)
+- [Klient](#klient)
 - [API-dokumentation](#api-dokumentation)
 - [Databas](#databas)
 - [Deployment och CI/CD](#deployment-och-cicd)
@@ -15,11 +16,9 @@
 ## Beskrivning
 
 RedflagAPI är ett REST API som fungerar som ett register över så kallade "red flags". En "red flag" i en relation är en varningssignal eller ett tecken på att något inte står rätt till. Det kan indikera problematiskt beteende, attityder eller dynamik som kan leda till ohälsosamma eller destruktiva mönster i relationen. 
-API:et erbjuder CRUD-operationer för att hantera information om dessa redflags. Applikationen är byggd med Spring Boot och använder en MySQL-databas som är hostad i AWS RDS. Applikationen körs på AWS Elastic Beanstalk och är integrerad med AWS CodeBuild och CodePipeline för CI/CD.
+API:et erbjuder CRUD-operationer för att hantera information om dessa redflags. Applikationen är byggd med Spring Boot och använder en MySQL-databas som är hostad i AWS RDS. Applikationen körs på en AWS Elastic Beanstalk-server och är integrerad med AWS CodeBuild och CodePipeline för CI/CD.
 
 ## Installation
-
-### Med AWS Elastic Beanstalk
 
 För att köra applikationen, följ dessa steg:
 
@@ -34,15 +33,18 @@ För att köra applikationen, följ dessa steg:
    mvn spring-boot:run
    ```
 
-Applikationen kommer nu att köras på http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/. 
-Testa med de olika endpoints som finns i Swagger-UI genom att lägga till /swagger-ui/index.html i slutet av URL:en.
-
-Det finns även en generated-requests.http-fil i roten av projektet som ger en tydligare syntax till swagger json-bodys.
-
+Applikationen kommer nu att köras mot databasen på "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com".
 
 ### Deployment till AWS Elastic Beanstalk
 
-Den här applikationen är konfigurerad för att automatiskt deployas till AWS Elastic Beanstalk via en CI/CD-pipeline som använder GitHub Actions, AWS CodeBuild och AWS CodePipeline.
+Den här applikationen är konfigurerad för att automatiskt deployas till AWS Elastic Beanstalk vid händelse av en push via en CI/CD-pipeline som använder GitHub Actions, AWS CodeBuild och AWS CodePipeline.
+
+### Klient
+
+Till API:et medföljer även en enkel Java-baserad konsollapplikation som utvecklats för att användaren ska kunna interagera med API
+direkt från kommandoraden. Klienten är en klass vid namn "ApiClient" som finns under package "client".  Klassen är uppdelad i två huvudsakliga sektioner: hantering av användare och hantering av "Redflags", båda med full CRUD-funktionalitet (Create, Read, Update, Delete).
+
+För att köra klienten måste applikationen vara igång och därefter kan klienten startas via en main-metod längst ner i klassen.
 
 ## API-dokumentation
 
@@ -53,6 +55,8 @@ API:et är dokumenterat med Swagger. När applikationen körs kan du besöka Swa
 - **Lokal körning**: `http://localhost:5000/swagger-ui/index.html`
 - **AWS Elastic Beanstalk-domänen**: `http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html`
 
+Det finns även en generated-requests.http-fil i roten av projektet som ger en tydligare syntax till swagger json-bodys.
+
 ### API Endpoints
 
 #### Redflag Endpoints
@@ -60,15 +64,6 @@ API:et är dokumenterat med Swagger. När applikationen körs kan du besöka Swa
 - **GET /redflags**: Hämtar alla redflags.
 - **POST /redflags**: Skapar en ny redflag.
     - Request body:
-      ```json
-      {
-        "description": "Detta är en beskrivning",
-        "category": "BEHAVIOR",
-        "examples": "Exempel på beteende",
-        "advice": "Undvik detta beteende"
-      }
-      ```
-    - Response:
       ```json
       {
         "id": 1,
@@ -84,8 +79,18 @@ API:et är dokumenterat med Swagger. När applikationen körs kan du besöka Swa
       }
       ```
 
-- **PUT /redflags/{id}**: Uppdaterar en redflag baserat på ID.
-- **DELETE /redflags/{id}**: Tar bort en redflag baserat på ID.
+#### User Endpoints
+
+- **GET /users**: Hämtar alla users.
+- **POST /users**: Skapar en ny user.
+    - Request body:
+      ```json
+      {
+  "username": "john_doe",
+  "password": "password123"
+}
+- **PUT /users/{id}**: Uppdaterar en user baserat på ID.
+- **DELETE /users/{id}**: Tar bort en user baserat på ID.
 
 ### Javadocs
 
