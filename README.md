@@ -1,5 +1,10 @@
 # RedflagAPI
 
+## NOTICE
+
+APP CAN NOW ONLY RUN LOCALLY BECAUSE OF TERMINATION OF AWS ACCOUNT
+RUN IT LOCALLY USING: mvn spring-boot:run
+
 ## Table of Contents
 
 - [Description](#description)  
