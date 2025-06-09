@@ -1,167 +1,207 @@
 # RedflagAPI
 
-## Innehållsförteckning
+## Table of Contents
 
-- [Beskrivning](#beskrivning)
-- [Installation](#installation)
-- [Klient](#klient)
-- [API-dokumentation](#api-dokumentation)
-- [Databas](#databas)
-- [Deployment och CI/CD](#deployment-och-cicd)
-- [Testning och Kodkvalitet](#testning-och-kodkvalitet)
-- [Miljövariabler](#miljövariabler)
-- [Teknologier](#teknologier)
-- [Kontakt](#kontakt)
+- [Description](#description)  
+- [Installation](#installation)  
+- [Client](#client)  
+- [API Documentation](#api-documentation)  
+- [Database](#database)  
+- [Deployment and CI/CD](#deployment-and-cicd)  
+- [Testing and Code Quality](#testing-and-code-quality)  
+- [Environment Variables](#environment-variables)  
+- [Technologies](#technologies)  
+- [Contact](#contact)
 
-## Beskrivning
+---
 
-RedflagAPI är ett REST API som fungerar som ett register över så kallade "red flags". En "red flag" i en relation är en varningssignal eller ett tecken på att något inte står rätt till. Det kan indikera problematiskt beteende, attityder eller dynamik som kan leda till ohälsosamma eller destruktiva mönster i relationen. 
-API:et erbjuder CRUD-operationer för att hantera information om dessa redflags. Applikationen är byggd med Spring Boot och använder en MySQL-databas som är hostad i AWS RDS. Applikationen körs på en AWS Elastic Beanstalk-server och är integrerad med AWS CodeBuild och CodePipeline för CI/CD.
+## Description
+
+RedflagAPI is a REST API that serves as a registry of so-called "red flags." A "red flag" in a relationship is a warning sign or an indicator that something might be wrong. It may point to problematic behavior, attitudes, or dynamics that can lead to unhealthy or destructive patterns in a relationship.  
+The API offers full CRUD operations to manage red flag information. The application is built with Spring Boot and uses a MySQL database hosted on AWS RDS. It runs on an AWS Elastic Beanstalk server and is integrated with AWS CodeBuild and CodePipeline for CI/CD.
+
+---
 
 ## Installation
 
-För att köra applikationen, följ dessa steg:
+To run the application, follow these steps:
 
-1. Klona detta repo:
+1. Clone this repo:
    ```bash
    git clone https://github.com/CarolinaMCorreia/RedflagAPI.git
-   ```
+````
 
-2. Bygg och kör applikationen med Maven:
+2. Build and run the application using Maven:
+
    ```bash
    mvn clean install
    mvn spring-boot:run
    ```
 
-Applikationen kommer nu att köras mot databasen på "http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com".
+The application will now run connected to the database at:
+`http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com`
 
-### Deployment till AWS Elastic Beanstalk
+### Deploying to AWS Elastic Beanstalk
 
-Den här applikationen är konfigurerad för att automatiskt deployas till AWS Elastic Beanstalk vid händelse av en push via en CI/CD-pipeline som använder GitHub Actions, AWS CodeBuild och AWS CodePipeline.
+This application is configured to deploy automatically to AWS Elastic Beanstalk on push events via a CI/CD pipeline using GitHub Actions, AWS CodeBuild, and AWS CodePipeline.
 
-### Klient
+---
 
-Till API:et medföljer även en enkel Java-baserad konsollapplikation som utvecklats för att användaren ska kunna interagera med API
-direkt från kommandoraden. Klienten är en klass vid namn "ApiClient" som finns under package "client".  Klassen är uppdelad i två huvudsakliga sektioner: hantering av användare och hantering av "Redflags", båda med full CRUD-funktionalitet (Create, Read, Update, Delete).
+## Client
 
-För att köra klienten måste applikationen vara igång och därefter kan klienten startas via en main-metod längst ner i klassen.
+The API includes a simple Java-based console application that allows users to interact with the API directly from the command line.
+The client is a class named `ApiClient` located in the `client` package. The class is divided into two main sections: user management and red flag management, both with full CRUD functionality.
 
-## API-dokumentation
+To run the client, ensure the API application is running, then launch the client via the `main` method at the bottom of the class.
 
-API:et är dokumenterat med Swagger. När applikationen körs kan du besöka Swagger-UI för att utforska och testa API:et.
+---
 
-### Åtkomst till Swagger-UI
+## API Documentation
 
-- **Lokal körning**: `http://localhost:5000/swagger-ui/index.html`
-- **AWS Elastic Beanstalk-domänen**: `http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html`
+The API is documented with Swagger. When the application is running, you can visit Swagger UI to explore and test the API.
 
-Det finns även en generated-requests.http-fil i roten av projektet som ger en tydligare syntax till swagger json-bodys.
+### Accessing Swagger UI
+
+* **Local**: `http://localhost:5000/swagger-ui/index.html`
+* **AWS Elastic Beanstalk**: `http://redflags-env.eba-phvwsvmq.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html`
+
+There is also a `generated-requests.http` file in the root of the project that provides better syntax visibility for Swagger JSON bodies.
 
 ### API Endpoints
 
 #### Redflag Endpoints
 
-- **GET /redflags**: Hämtar alla redflags.
-- **POST /redflags**: Skapar en ny redflag.
-    - Request body:
-      ```json
-      {
+* **GET /redflags**: Fetch all red flags.
+* **POST /redflags**: Create a new red flag.
+
+  * Request body:
+
+    ```json
+    {
+      "id": 1,
+      "description": "This is a description",
+      "category": "BEHAVIOR",
+      "examples": "Example behavior",
+      "advice": "Avoid this behavior",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "user": {
         "id": 1,
-        "description": "Detta är en beskrivning",
-        "category": "BEHAVIOR",
-        "examples": "Exempel på beteende",
-        "advice": "Undvik detta beteende",
-        "createdAt": "2023-01-01T12:00:00Z",
-        "user": {
-          "id": 1,
-          "username": "användare1"
-        }
+        "username": "user1"
       }
-      ```
+    }
+    ```
 
 #### User Endpoints
 
-- **GET /users**: Hämtar alla users.
-- **POST /users**: Skapar en ny user.
-    - Request body:
-      ```json
-      {
-  "username": "john_doe",
-  "password": "password123"
-}
-- **PUT /users/{id}**: Uppdaterar en user baserat på ID.
-- **DELETE /users/{id}**: Tar bort en user baserat på ID.
+* **GET /users**: Fetch all users.
+* **POST /users**: Create a new user.
 
-### Javadocs
+  * Request body:
 
-Koden är dokumenterad med Javadocs. För att generera och läsa Javadocs, kör följande kommando i projektets rotmapp:
+    ```json
+    {
+      "username": "john_doe",
+      "password": "password123"
+    }
+    ```
+* **PUT /users/{id}**: Update a user by ID.
+* **DELETE /users/{id}**: Delete a user by ID.
+
+---
+
+## Javadocs
+
+The code is documented with Javadocs. To generate and view the Javadocs, run the following command in the project root:
 
 ```bash
 mvn javadoc:javadoc
 ```
 
-## Åtkomst till Javadocs
-Detta kommer att skapa Javadocs-dokumentationen under target/site/apidocs/. Du kan öppna index.html-filen i en webbläsare för att bläddra igenom dokumentationen.
+### Accessing Javadocs
 
-## Databas
-
-Applikationen är ansluten till en MySQL-databas som är hostad på AWS RDS.
-
-**Databasens uppsättning:**
-- För att köra applikationen första gången behöver databasen `redflagdb` skapas manuellt i MySQL. Detta görs genom att ansluta till din MySQL-instans och köra kommandot:
-
-  ```sql
-  CREATE DATABASE redflagdb;
-  USE redflagdb;
-
-Efter att databasen har skapats kommer Hibernate automatiskt att generera de nödvändiga tabellerna när applikationen startas.
-
-### Databasstruktur
-
-Databasens schema består av två huvudsakliga tabeller:
-
-- **Users**: Lagrar information om användare.
-- **Redflags**: Lagrar information om redflags kopplade till användare.
-
-## Deployment och CI/CD
-
-Applikationen byggs och deployas automatiskt genom en CI/CD-pipeline som inkluderar följande steg:
-
-- **GitHub Actions**: Används för att köra linter och säkerställa kodkvalitet. Actions är konfigurerade för att automatiskt bygga projektet och köra tester på varje push eller pull request.
-- **AWS CodeBuild**: När en commit pushas till huvudgrenen, triggas en CodeBuild-process som bygger projektet och kör eventuella tester.
-- **AWS CodePipeline**: Hanterar deployprocessen. Efter en lyckad build deployas applikationen automatiskt till AWS Elastic Beanstalk.
-
-## Testning och Kodkvalitet
-
-Projektet inkluderar tester och verktyg för att upprätthålla hög kodkvalitet:
-
-- **Serviceklass-tester med JUnit**: JUnit används för att testa alla serviceklasser, vilket säkerställer att affärslogiken i applikationen fungerar som förväntat. Dessa tester körs som en del av CI-processen, vilket minskar risken för buggar i produktionsmiljön.
-    - För att köra testerna:
-      ```bash
-      mvn test
-      ```
-- **Javadocs**: Koden är dokumenterad med Javadocs, och det finns kontroller för att säkerställa att dokumentationen är komplett och korrekt.
-- **Kodkvalitet**: Linting-kontroller körs som en del av byggprocessen för att upprätthålla en hög kodstandard. Detta inkluderar både kodstil och korrekt implementering av Javadocs.
-
-## Miljövariabler
-
-Applikationens miljövariabler hittar du i `application.properties`.
-
-## Teknologier
-
-Applikationen använder följande teknologier och verktyg:
-
-- **Spring Boot**: Backend-ramverk
-- **MySQL**: Relationsdatabas (hostad på AWS RDS)
-- **Swagger**: API-dokumentation
-- **AWS Elastic Beanstalk**: Hosting och deployment
-- **AWS CodeBuild & CodePipeline**: CI/CD-hantering
-- **GitHub Actions**: För CI och kodkvalitetskontroller
-- **JUnit**: För enhetstester av serviceklasser
-- **Javadocs**: För kod-dokumentation
-
-## Kontakt
-
-Om du har frågor eller vill bidra till projektet kontakta mig via mail 94carcon@gafe.molndal.se eller skapa en issue på GitHub.
+This will create the documentation in `target/site/apidocs/`. You can open the `index.html` file in a browser to browse the docs.
 
 ---
+
+## Database
+
+The application is connected to a MySQL database hosted on AWS RDS.
+
+**Database setup:**
+To run the application for the first time, create the `redflagdb` database manually in MySQL by connecting to your MySQL instance and running:
+
+```sql
+CREATE DATABASE redflagdb;
+USE redflagdb;
+```
+
+Once the database is created, Hibernate will automatically generate the required tables when the application starts.
+
+### Database Structure
+
+The schema includes two main tables:
+
+* **Users**: Stores user information
+* **Redflags**: Stores red flag data linked to users
+
+---
+
+## Deployment and CI/CD
+
+The application is built and deployed automatically through a CI/CD pipeline with the following components:
+
+* **GitHub Actions**: Runs linting and ensures code quality. Configured to build the project and run tests on every push or pull request.
+* **AWS CodeBuild**: Triggers a build process when a commit is pushed to the main branch, compiling the project and running tests.
+* **AWS CodePipeline**: Manages the deployment process. After a successful build, the application is deployed automatically to AWS Elastic Beanstalk.
+
+---
+
+## Testing and Code Quality
+
+The project includes tests and tools to maintain high code quality:
+
+* **Service Class Testing with JUnit**: All service classes are tested with JUnit to ensure the business logic functions as expected. These tests run during the CI process to reduce bugs in production.
+
+  * To run tests:
+
+    ```bash
+    mvn test
+    ```
+* **Javadocs**: All code is documented with Javadocs. Checks are included to ensure documentation completeness and accuracy.
+* **Code Quality**: Linting checks are part of the build process to maintain a high standard. This includes style and Javadoc validation.
+
+---
+
+## Environment Variables
+
+Application environment variables can be found in the `application.properties` file.
+
+---
+
+## Technologies
+
+This application uses the following technologies and tools:
+
+* **Spring Boot**: Backend framework
+* **MySQL**: Relational database (hosted on AWS RDS)
+* **Swagger**: API documentation
+* **AWS Elastic Beanstalk**: Hosting and deployment
+* **AWS CodeBuild & CodePipeline**: CI/CD pipeline
+* **GitHub Actions**: CI and code quality checks
+* **JUnit**: Unit testing for service classes
+* **Javadocs**: Code documentation
+
+---
+
+## Contact
+
+If you have questions or want to contribute, contact me at:
+📧 [94carcon@gafe.molndal.se](mailto:94carcon@gafe.molndal.se)
+or open an issue on GitHub.
+
+---
+
+```
+
+Let me know if you want this file zipped or added with badges (like build status, license, etc)!
+```
